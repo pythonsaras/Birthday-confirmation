@@ -4,7 +4,7 @@ current_date=current_date.split('-')
 
 b_date=input('Enter birthday in yyyy-mm-dd format: ')
 
-name=("Name of birthday legend ? ")
+name=input("Name of birthday legend ? ")
 b_date=b_date.split('-')
 
 
@@ -13,7 +13,8 @@ if current_date[1]==b_date[1] and current_date[2]==b_date[2]:
     ordinal_suffix={1:'st',2:'nd',3:'rd',
     11:'th'}.get(age%10 if not 10<age <=13 else age %14, 'th')
     print(f"It's {name}'s {age}{ordinal_suffix} Birthday")
+    exit()
 else:
-    print("Sorry, today is not birthday")
-
+    print(f"Sorry, today is not {name} birthday")
+    exit()
 
